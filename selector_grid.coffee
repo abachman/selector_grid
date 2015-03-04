@@ -18,6 +18,7 @@ render = (width) ->
   cells = {}
 
   $('.selector-grid').empty()
+  show_labels = $('#show_labels').is(':checked')
 
   y = 0
   while y < 512
@@ -30,7 +31,7 @@ render = (width) ->
 
       continue if channel > MAX_CHANNEL
 
-      cell = $("<span>#{channel}</span>").addClass('cell text-off')
+      cell = $("<span>#{channel}</span>").addClass("cell #{ if show_labels then '' else 'text-off' }")
       cell.data('channel', channel)
       cells[channel] = cell
 

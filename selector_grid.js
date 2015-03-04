@@ -21,9 +21,10 @@
   });
 
   render = function(width) {
-    var cell, cells, channel, row, x, y, _results;
+    var cell, cells, channel, row, show_labels, x, y, _results;
     cells = {};
     $('.selector-grid').empty();
+    show_labels = $('#show_labels').is(':checked');
     y = 0;
     _results = [];
     while (y < 512) {
@@ -38,7 +39,7 @@
           if (channel > MAX_CHANNEL) {
             continue;
           }
-          cell = $("<span>" + channel + "</span>").addClass('cell text-off');
+          cell = $("<span>" + channel + "</span>").addClass("cell " + (show_labels ? '' : 'text-off'));
           cell.data('channel', channel);
           cells[channel] = cell;
           row.append(cell);
