@@ -1,0 +1,57 @@
+.content {
+  padding: 12px 0 0 12px;
+}
+
+$scaling: 6px;
+
+.options {
+  .option {
+    margin-left: 18px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  #columns {
+    padding: 3px 4px 2px 4px;
+    margin-top: 0px;
+    font-size: 18px;
+    width: 48px;
+  }
+}
+
+.selector-grid {
+  margin: 16px 0;
+
+  .cell {
+    font-size: $scaling + ($scaling / 2);
+    display: inline-block;
+
+    border: 2px solid #fff;
+
+    background: #000;
+    opacity: 0.2;
+    color: #fff;
+
+    padding: 2px;
+    width: $scaling * 3;
+    height: $scaling * 2;
+
+    &.selected {
+      background: #00f;
+      opacity: 1.0;
+    }
+
+    &.hover {
+      border: 2px solid #aad;
+      opacity: 1.0;
+    }
+
+    &.text-off {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
